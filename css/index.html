@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strength Sanctuary</title>
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+    body {
+        font-family: "Quicksand", sans-serif;
+        color: white;
+        background-image: url('https://img.freepik.com/free-photo/man-training-with-weight-lifting_23-2149307985.jpg?t=st=1745299423~exp=1745303023~hmac=54d15f3af5ee1120f9103f5c467217f1d089893b0dab3ad2b725d58190560ad8');
+        animation-timing-function: ease ;
+        background-size: cover;
+        background-repeat: no-repeat;        
+    }
+
+     .welcome-text {
+        font-family: "Quicksand", sans-serif;
+        position: absolute;
+        top: 40%;
+        left: 15%;  
+        font-size: 100px;
+        font-weight: bolder;
+        color: #FFFF00; 
+        justify-content: center;
+        align-items: center;
+        animation: fadeIn 2s ease-out forwards;
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+     @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .left{
+        display: inline-block;
+        position:absolute;
+        left: 30px;
+        top: 10px;
+        }
+
+        .left img{
+            width: 125px;
+            }
+
+        .left div {
+            text-align: center;
+        }
+
+    .mid{
+        display: block;
+        width: 40%;
+        margin: 10px auto;
+        border: 2px solid white;
+
+    }
+    .right{
+        position:absolute;
+        border: 2px solid;
+        padding: 10px;
+        right: 30px;
+        top: 13px;
+        display: inline-block;
+        }
+
+    .navbar{
+      display: inline-block;
+    }
+
+    .navbar li{
+      display: inline-block;
+    }
+
+    .navbar li a {
+      color: white;
+      text-decoration: none;
+      padding:34px 14px;
+      font-size: 20px;
+    }
+
+    .navbar li a:hover, .navbar li a.active {
+        text-decoration: underline;
+        color:#FFFF00;
+    }
+
+    .btn {
+        margin: 15px 9px;
+        background-color: black;
+        color: white;
+        padding: 7px 17px;
+        border-radius: 10px;
+    }
+
+    .btn:hover {
+        background-color: slategrey;
+    }
+
+    @media (max-width: 768px) {
+    .welcome-text {
+        font-size: 2rem;
+        top: 25%;
+        left: 5%;
+        text-align: center;
+    }
+
+    .left img {
+        width: 80px;
+    }
+
+    .mid {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .navbar li a {
+        padding: 15px 8px;
+        font-size: 16px;
+    }
+
+    .right {
+        position: static;
+        text-align: center;
+        margin-top: 10px;
+        border: none;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .navbar li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+}
+</style>
+<body>
+
+    <li> <a href="aboutus.html"></a></li>
+    <header class="header">
+        <div class="welcome-text">Welcome to GYM Strength Scanctuary</div>
+        <div class="left">
+            <img src="C:\Users\adity\Desktop\vrushabh\fitnesswebsite\strengthsanctary.png" alt="photo">
+
+        </div>
+        <div class="mid">
+        <ul class="navbar">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="aboutus.html">About us</a></li>
+            <li><a href="training.html">Trainings</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+        </ul>
+
+        </div>
+        <div class="right">
+            <div class="timing">
+                <p>05:00AM - 12:00PM</p>
+                <P>04:00PM - 11:00PM</P>
+                <p>Monday to Sunday</p>
+                
+            </div>
+        </div>
+    </header>
+    
+</body> 
+</html>
