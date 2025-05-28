@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dosis:wght@200..800&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: "Quicksand", sans-serif;
+      color: white;
+      margin: 0;
+      background-image: url('https://images.pexels.com/photos/1552252/pexels-photo-1552252.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .About {
+      text-align: center;
+      font-size: 70px;
+      font-weight: bold;
+      color: #FFFF00;
+      margin-top: 40px;
+      animation: fadeIn 2s ease-out forwards;
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .p {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      font-size: large;
+      margin: 20px auto;
+      max-width: 80%;
+      padding: 30px;
+      box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .trainer {
+      font-size: 40px;
+      text-align: center;
+      color: orange;
+      margin: 50px 0 20px;
+    }
+
+    .tdetail {
+      font-size: 30px;
+      font-weight: bolder;
+      width: 900px;
+      margin: 0 auto;
+      padding: 15px 20px;
+      color: orange;
+      border: 4px solid brown;
+      border-radius: 25px;
+      background-color: rgba(0, 0, 0, 0.6);
+      position: relative;
+      z-index: 1;
+    }
+
+    @keyframes waveMove {
+      0% { background-position: 0 0; }
+      100% { background-position: 40px 0; }
+    }
+
+    .trainer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding-bottom: 60px;
+    }
+
+    .flip-card {
+      background-color: transparent;
+      width: 200px;
+      height: 300px;
+      perspective: 1000px;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .flip-card-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .flip-card-back {
+      background-color: #000;
+      color: white;
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+  </style>
+<body>
+
+  <div class="About">About Us</div>
+
+  <div class="p">
+    <p>-->More than machines and muscles, we built Strength Sanctuary Gym to be a community center — a place where people support each other, celebrate progress, and never feel alone. From group HIIT sessions to post-workout hangs, everything we do builds connection.</p>
+    <p>-->The Strength Scanctuary Gym was started in 2015. The owner of Strength Scanctuary Gym is Vrushabh Patel.</p>
+    <p>-->The idea of oipening Gym with much of facilities and friendly price came in my mind when I also having a dream of having physique.</p>
+    <p>-->In college time I have started with home workout and take my physique at next level but at home family member are not allowing to join gym at that time this idea came.</p>
+    <p>-->In Strength Scanctuary Gym we are giving one on one trainer support. Here trainer are certified and performed at international level.</p>
+    <p>-->We also maintain hygiene at gym by cleaning the equipments dail and grooming the whole gym. We have put water cooler for water.</p>
+    <p>-->We are providing a big bowl of "BCAA" supplement in the gym and it is free and any gym members can take it. It will maintin hydration and energy level during training</p>
+    <p>----> Location: 541/6694, 4th floor of Sigma Complex, nr. karnavati foods, Shyam Shikhar road, Ahmedabad-380024</p>
+  </div>
+
+</body>
+</html>
