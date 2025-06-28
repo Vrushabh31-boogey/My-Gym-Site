@@ -1,182 +1,176 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strength Sanctuary</title>
-</head>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
-<style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Strength Sanctuary</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Quicksand:wght@300..700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-        font-family: "Quicksand", sans-serif;
-        color: white;
-        background-image: url('https://img.freepik.com/free-photo/man-training-with-weight-lifting_23-2149307985.jpg?t=st=1745299423~exp=1745303023~hmac=54d15f3af5ee1120f9103f5c467217f1d089893b0dab3ad2b725d58190560ad8');
-        animation-timing-function: ease ;
-        background-size: cover;
-        background-repeat: no-repeat;        
+      font-family: "Quicksand", sans-serif;
+      color: white;
+      background-image: url('https://img.freepik.com/free-photo/man-training-with-weight-lifting_23-2149307985.jpg?t=st=1745299423~exp=1745303023~hmac=54d15f3af5ee1120f9103f5c467217f1d089893b0dab3ad2b725d58190560ad8');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      position: relative;
     }
 
-     .welcome-text {
-        font-family: "Quicksand", sans-serif;
-        position: absolute;
-        top: 40%;
-        left: 15%;  
-        font-size: 100px;
-        font-weight: bolder;
-        color: #FFFF00; 
-        justify-content: center;
-        align-items: center;
-        animation: fadeIn 2s ease-out forwards;
-        opacity: 0;
-        transform: translateY(-20px);
+    /* Overlay for text visibility */
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 0;
     }
 
-     @keyframes fadeIn {
+    header {
+      position: relative;
+      z-index: 1;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .left img {
+      width: 120px;
+    }
+
+    .mid ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .mid ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      padding: 10px;
+      transition: 0.3s;
+    }
+
+    .mid ul li a:hover,
+    .mid ul li a.active {
+      text-decoration: underline;
+      color: #ffff00;
+    }
+
+    .right {
+      text-align: right;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .welcome-text {
+      font-size: 3rem;
+      text-align: center;
+      font-weight: bold;
+      color: #ffff00;
+      margin-top: 10vh;
+      animation: fadeIn 2s ease-out forwards;
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+
+    @keyframes fadeIn {
       to {
         opacity: 1;
         transform: translateY(0);
       }
     }
 
-    .left{
-        display: inline-block;
-        position:absolute;
-        left: 30px;
-        top: 10px;
-        }
+    /* Responsive Layout */
+    @media (max-width: 992px) {
+      .welcome-text {
+        font-size: 2.2rem;
+        margin-top: 8vh;
+      }
 
-        .left img{
-            width: 125px;
-            }
-
-        .left div {
-            text-align: center;
-        }
-
-    .mid{
-        display: block;
-        width: 40%;
-        margin: 10px auto;
-        border: 2px solid white;
-
-    }
-    .right{
-        position:absolute;
-        border: 2px solid;
-        padding: 10px;
-        right: 30px;
-        top: 13px;
-        display: inline-block;
-        }
-
-    .navbar{
-      display: inline-block;
-    }
-
-    .navbar li{
-      display: inline-block;
-    }
-
-    .navbar li a {
-      color: white;
-      text-decoration: none;
-      padding:34px 14px;
-      font-size: 20px;
-    }
-
-    .navbar li a:hover, .navbar li a.active {
-        text-decoration: underline;
-        color:#FFFF00;
-    }
-
-    .btn {
-        margin: 15px 9px;
-        background-color: black;
-        color: white;
-        padding: 7px 17px;
-        border-radius: 10px;
-    }
-
-    .btn:hover {
-        background-color: slategrey;
-    }
-
-    @media (max-width: 768px) {
-    .welcome-text {
-        font-size: 2rem;
-        top: 25%;
-        left: 5%;
+      .right {
         text-align: center;
-    }
+        width: 100%;
+      }
 
-    .left img {
-        width: 80px;
-    }
+      .mid ul {
+        flex-direction: column;
+        gap: 10px;
+      }
 
-    .mid {
-        width: 90%;
-        margin: 10px auto;
-    }
-
-    .navbar li a {
-        padding: 15px 8px;
+      .mid ul li a {
         font-size: 16px;
+      }
     }
 
-    .right {
-        position: static;
-        text-align: center;
-        margin-top: 10px;
-        border: none;
-    }
+    @media (max-width: 600px) {
+      .left img {
+        width: 80px;
+      }
 
-    .navbar {
-        display: flex;
+      .welcome-text {
+        font-size: 1.7rem;
+        padding: 0 15px;
+      }
+
+      .top-bar {
         flex-direction: column;
         align-items: center;
-        padding: 0;
-    }
+      }
 
-    .navbar li {
-        display: block;
-        margin: 5px 0;
+      .right {
+        font-size: 13px;
+      }
     }
-
-    .btn {
-        font-size: 14px;
-        padding: 5px 10px;
-    }
-}
-</style>
+  </style>
+</head>
 <body>
 
-    <li> <a href="aboutus.html"></a></li>
-    <header class="header">
-        <div class="welcome-text">Welcome to GYM Strength Scanctuary</div>
-        <div class="left">
-            <img src="C:\Users\adity\Desktop\vrushabh\fitnesswebsite\strengthsanctary.png" alt="photo">
+  <header>
+    <div class="top-bar">
+      <div class="left">
+        <img src="strengthsanctary.png" alt="Gym Logo">
+      </div>
 
-        </div>
-        <div class="mid">
+      <nav class="mid">
         <ul class="navbar">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="aboutus.html">About us</a></li>
-            <li><a href="training.html">Trainings</a></li>
-            <li><a href="contact.html">Contact us</a></li>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="aboutus.html">About us</a></li>
+          <li><a href="training.html">Trainings</a></li>
+          <li><a href="contact.html">Contact us</a></li>
         </ul>
+      </nav>
 
-        </div>
-        <div class="right">
-            <div class="timing">
-                <p>05:00AM - 12:00PM</p>
-                <P>04:00PM - 11:00PM</P>
-                <p>Monday to Sunday</p>
-                
-            </div>
-        </div>
-    </header>
-    
-</body> 
+      <div class="right">
+        <p>05:00 AM - 12:00 PM</p>
+        <p>04:00 PM - 11:00 PM</p>
+        <p>Monday to Sunday</p>
+      </div>
+    </div>
+
+    <div class="welcome-text">Welcome to GYM Strength Sanctuary</div>
+  </header>
+
+</body>
 </html>
